@@ -1,0 +1,111 @@
+body{
+    margin:0;
+    padding:0;
+    background: #73C8A9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #373B44, #73C8A9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #373B44, #73C8A9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+.Title{
+    text-align: center;
+    margin-top:4%;
+    margin-bottom: 6%;
+    
+}
+.Title h1{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    
+}
+.Title span{
+    color: darkolivegreen;
+}
+.form{
+    width:40%;
+    
+}
+.form input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1.5px solid white;
+    color:white;
+    font-size: larger;
+    font-weight: bolder;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    
+}
+.form input:focus{
+    outline: none;
+    background-color: transparent;
+    border:none;
+    border-bottom:1.5px solid white;
+    box-shadow: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+}
+.form button{
+    background-color: darkolivegreen;;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    border: none;
+}
+.form button:hover{
+ background-color: inherit;
+ border: 1px solid darkolivegreen;
+ color: darkolivegreen;;
+}
+#mainContent{
+    display:flex;
+    justify-content: start;
+    flex-wrap: wrap;
+
+    
+}
+.wheather-container{
+ text-align: center;
+ box-shadow: 10px 5px 5px rgb(173, 194, 252) ;
+ width:250px;
+ color: #373B44;
+ margin:25px;
+ background-color: aliceblue;
+ border-radius: 7px;
+ padding:20px;
+ line-height: 5em;
+ letter-spacing: 1px;
+ opacity: 0.8;
+ 
+}
+.wheather-container h2{
+    font-size: 1.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #373B44;
+   
+}
+.wheather-container h4{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+}
+.wheather-container h3{
+    font-family: fantasy;
+    font-size: 1.2em;
+    
+}
+.form input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: darkslategrey;
+    font-size: larger;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    opacity: 1; /* Firefox */
+  }
+  #message{
+      font-weight: 300;
+      font-family: 'Times New Roman', Times, serif;
+      margin-top: 3px;
+  }
