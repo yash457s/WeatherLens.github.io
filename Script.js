@@ -1,33 +1,13 @@
+// Variables
 var form = document.querySelector('form');
 var input = document.querySelector('input');
 var main = document.querySelector('#mainContent');
 var formContainer = document.querySelector('.form');
 var msg = document.querySelector('#message');
-var cities=[];
-form.addEventListener('submit', async function (evt) {
-    evt.preventDefault();
-    var inputText = input.value;
-    msg.innerText = "";
-    try {
-        var response = await fetch(`http://api.weatherapi.com/v1/current.json?key=e5ecb286dead4694bd1100143210110&q=${inputText}&aqi=yes`);
-        var data = await response.json();
-        if(cities.indexOf(data.location.name)!==-1)
-        {
-            msg.innerText = "City already added...";
-        }
-        else
-        {
-            createCard(data);
-            cities.push(data.location.name);
-        }
-     
-    }
-    catch (e) {
-        msg.innerText = "Please Enter the valid city name 😩";
-    }
-    input.value = "";
-})
+var cities = [];
+var inputText;
 
+// functions 
 function createCard(data) {
     let div = document.createElement('div');
     let img = document.createElement('img');
@@ -51,3 +31,24 @@ function createCard(data) {
     div.append(humidity);
     main.append(div);
 }
+// event Listners
+
+form.addEventListener('submit', async function (evt) {
+    evt.preventDefault();
+    inputText = input.value;
+    msg.innerText = "";
+    try {
+        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=e5ecb286dead4694bd1100143210110&q=${inputText}&aqi=yes`);
+        const data = await response.json();
+        if (cities.indexOf(data.location.name) !== -1) msg.innerText = "City already added...";
+        else {
+            createCard(data);
+            cities.push(data.location.name);
+        }
+    }
+    catch (e) {
+        msg.innerText = "Please Enter the valid city name 😩";
+    }
+    input.value = "";
+})
+

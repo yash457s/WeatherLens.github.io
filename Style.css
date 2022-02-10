@@ -6,6 +6,34 @@ body{
     background: linear-gradient(to right, #373B44, #73C8A9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
 }
+@media(max-width:665px)
+{
+   .form form{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: space-between;
+   }
+   input[type="search"]{
+       width:300px;
+       margin-bottom: 20px;
+   }
+}
+
+/*Ids selectors*/
+#message{
+    font-weight: 300;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 3px;
+}
+#mainContent{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* class selectors */
 .Title{
     text-align: center;
     margin-top:4%;
@@ -23,7 +51,6 @@ body{
 }
 .form{
     width:40%;
-    
 }
 .form input{
     background-color: transparent;
@@ -58,13 +85,7 @@ body{
  border: 1px solid darkolivegreen;
  color: darkolivegreen;;
 }
-#mainContent{
-    display:flex;
-    justify-content: start;
-    flex-wrap: wrap;
 
-    
-}
 .wheather-container{
  text-align: center;
  box-shadow: 10px 5px 5px rgb(173, 194, 252) ;
@@ -104,8 +125,4 @@ body{
     font-weight: bold;
     opacity: 1; /* Firefox */
   }
-  #message{
-      font-weight: 300;
-      font-family: 'Times New Roman', Times, serif;
-      margin-top: 3px;
-  }
+ 
